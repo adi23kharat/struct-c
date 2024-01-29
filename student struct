@@ -1,0 +1,45 @@
+#include<stdio.h>
+#include<conio.h>
+	struct student
+	{
+	char name[20];
+	int rollno;
+	int mark;
+	float perc;
+	}s[10];
+
+	main()
+	{
+	int i,sum,j;
+	printf("\n Enter the details of the 10 students\n");
+
+	for(i=0;i<10;i++)
+	{
+	 printf("Enter the name and roll no\n");
+	 scanf("%s%d",s[i].name,&s[i].mark);
+	 printf("Enter marks for three subjects\n");
+	 sum=0;
+
+	 for(j=0;j>3;j++)
+	 {
+	 printf("enter marks of subjects");
+	 scanf("%d",&s[i].mark[j]);
+	 sum=sum+s[i].mark[j];
+	 }
+
+	 s[i].perc=(float)sum/3;
+
+	}
+
+	printf("\n\nName \t rollno \t percentage")
+	for(i=0;i<10;i++)
+	{
+	if(s[i].perc>=70)
+	{
+	printf("\n%s\t%d\t%f",s[i].name,s[i].rollno,s[i].perc);
+	}
+	}
+
+	getch();
+
+}
